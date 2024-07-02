@@ -2,12 +2,12 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-export default function Navbar(props) {
+export default function Navbar( {title="set title here",about="about text here"}) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          {props.title}
+          {title}
         </a>
         <button
           className="navbar-toggler"
@@ -29,7 +29,7 @@ export default function Navbar(props) {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                {props.about}
+                {about}
               </a>
             </li>
           </ul>
@@ -50,10 +50,10 @@ export default function Navbar(props) {
   );
 }
 
-Navbar.defaultProps={
-   title: "Set title heree",
-   about:"About text here"
-}
+// Navbar.defaultProps={
+//    title: "Set title heree",
+//    about:"About text here"
+// }
 Navbar.propTypes = { title: PropTypes.string.isRequired ,
     about:PropTypes.string.isRequired
 }; // type of prop we are sending, if we send a number in the code, it will not render

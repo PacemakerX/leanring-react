@@ -2,15 +2,21 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./component/Navbar";
+import TextForm from "./component/TextForm";
 
 // let name="sparsh";
 function App() {
   return (
     <>
-      {/* <Navbar  about =" myabout" title="TextUtile"  />    */}
-      {/* we are passing props  , well this is the method to use comments inside the tags*/ }
+      <div>
+        <Navbar about=" myabout" title="TextUtil" />
+        {/* we are passing props  , well this is the method to use comments inside the tags*/}
 
-      <Navbar/> 
+        {/* <Navbar/>  */}
+        <div className="container my-3">
+          <TextForm heading="Enter the text to analyze " />
+        </div>
+      </div>
     </>
   );
 }
