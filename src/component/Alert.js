@@ -15,8 +15,8 @@ export default function Alert(props) {
         {props.alert.msg}
         <button
           type="button"
-          className="btn"
-          data-bs-dismiss="alert"
+          className="btn"           // this is new, i have to look it on stack overflow btm-close , will display a X
+          data-bs-dismiss="alert" // this is new, i have to look it on stack overflow data-bs=dismiss
           aria-label="Close"
         ></button>
       </div>
