@@ -1,0 +1,8 @@
+/* TextForm.css */
+.form-control::placeholder {
+  color: #414141; /* Default placeholder color */
+}
+
+.dark .form-control::placeholder {
+  color: white; /* Placeholder color in dark mode */
+}

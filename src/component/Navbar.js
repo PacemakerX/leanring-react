@@ -2,12 +2,12 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-export default function Navbar( {title="set title here",about="about text here"}) {
+export default function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          {title}
+          {props.title}
         </a>
         <button
           className="navbar-toggler"
@@ -29,7 +29,7 @@ export default function Navbar( {title="set title here",about="about text here"}
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                {about}
+                {props.about}
               </a>
             </li>
           </ul>
@@ -44,6 +44,17 @@ export default function Navbar( {title="set title here",about="about text here"}
               Search
             </button>
           </form>
+          <div className={`form-check form-switch text-${props.mode==="light"?"dark":"light"}`}>
+            <input
+              className="form-check-input"
+              type="checkbox"
+              id="flexSwitchCheckDefault"
+              onClick={props.toggleMode}
+            />
+            <label className="form-check-label" forhtml="flexSwitchCheckDefault" >
+              Enable Dark mode
+            </label>
+          </div>
         </div>
       </div>
     </nav>
@@ -54,6 +65,7 @@ export default function Navbar( {title="set title here",about="about text here"}
 //    title: "Set title heree",
 //    about:"About text here"
 // }
-Navbar.propTypes = { title: PropTypes.string.isRequired ,
-    about:PropTypes.string.isRequired
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  about: PropTypes.string.isRequired,
 }; // type of prop we are sending, if we send a number in the code, it will not render
