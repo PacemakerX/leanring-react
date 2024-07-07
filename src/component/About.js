@@ -23,7 +23,7 @@ export default function About(props) {
               color: props.mode === "dark" ? "white" : "#414141",
             }}
             >
-              Accordion Item #1
+              Upper Case Conversion
             </button>
           </h2>
           <div
@@ -33,14 +33,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+            <strong>Upper Case Conversion:</strong> Convert your text into upper case with just a click. Perfect for making your text stand out.
             </div>
           </div>
         </div>
@@ -61,7 +54,7 @@ export default function About(props) {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              Lower Case Conversion
             </button>
           </h2>
           <div
@@ -71,14 +64,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+            <strong>Lower Case Conversion:</strong> Convert your text into lower case for a more subtle and formal look.
             </div>
           </div>
         </div>
@@ -99,7 +85,7 @@ export default function About(props) {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+              Numerical Case Conversion
             </button>
           </h2>
           <div
@@ -109,14 +95,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+            <strong>Numerical Form Conversion:</strong> Convert your text into numerical form, making it easy to handle various numeric data formats.
             </div>
           </div>
         </div>
