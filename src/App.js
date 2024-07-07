@@ -6,6 +6,8 @@ import TextForm from "./component/TextForm";
 import About from "./component/About";
 import { useState } from "react";
 import Alert from "./component/Alert";
+// eslint-disable-next-line no-unused-vars
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // let name="sparsh";
 function App() {
@@ -37,25 +39,41 @@ function App() {
   };
   return (
     <>
-      <div>
-        <Navbar
-          about=" myabout"
-          title="TextUtil"
-          mode={mode}
-          toggleMode={togglemode}
-        />
-        <Alert alert={alert} />
-        <div className="container my-3">
-          <TextForm
-            heading="Enter the text to analyze "
+      <Router>
+        <div>
+          <Navbar
+            about=" myabout"
+            title="TextUtil"
             mode={mode}
-            showAlert={showAlert}
+            toggleMode={togglemode}
           />
-          <About />
+          <Alert alert={alert} />
+          <div className="container my-3">
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route
+                path="/"
+                element={
+                  <TextForm
+                    heading="Enter the text to analyze"
+                    mode={mode}
+                    showAlert={showAlert}
+                  />
+                }
+              />
+            </Routes>
+          </div>
         </div>
-      </div>
+      </Router>
     </>
   );
 }
 
 export default App;
+
+
+
+/*
+ract router v6 is lates, so we don't use swtich in react router dom, we use Routes, there should not be any child of Route, enter the componnent should be inside the 
+the router tag
+*/
