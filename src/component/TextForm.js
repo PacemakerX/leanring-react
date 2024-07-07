@@ -86,8 +86,8 @@ export default function TextForm(props) {
             id="exampleFormControlTextarea1"
             rows="8"
             style={{
-              backgroundColor: props.mode === "dark" ? "#414141" : "white",
-              color: props.mode === "dark" ? "white" : "#414141",
+              backgroundColor: props.mode === "dark" ? "black" : "white",
+              color: props.mode === "dark" ? "white" : "black",
             }}
           ></textarea>
         </div>
