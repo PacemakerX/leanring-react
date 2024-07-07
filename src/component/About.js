@@ -1,38 +1,17 @@
 import React, { useState } from "react";
 
-export default function About() {
-  const [myStyle, setMyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
-
-  const[btnText,setbtnText]=useState("Enable dark mode")
-  // let myStyle = {
-  //   backgroundColor: "#414141",
-  //   color: "white",
-  // };
-
- const  toggleStyle = () => {
-    if (myStyle.color === "white") {
-      setMyStyle({
-        color: "#414141",
-        backgroundColor: "white",
-      });
-      setbtnText("Enable Dark mode")
-    } else {
-      setMyStyle({
-        color: "white",
-        backgroundColor: "#414141",
-      });
-      setbtnText("Enable light mode")
-    }
-  };
-
+export default function About(props) {
   return (
-    <div style={myStyle}>
+    <div            style={{
+      backgroundColor: props.mode === "dark" ? "#414141" : "white",
+      color: props.mode === "dark" ? "white" : "#414141",
+    }}>
       <h1 className="my-5 ">About Us</h1>
       <div className="accordion" id="accordionExample">
-        <div style={myStyle} className="accordion-item">
+        <div style={{
+              backgroundColor: props.mode === "dark" ? "#414141" : "white",
+              color: props.mode === "dark" ? "white" : "#414141",
+            }} className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
             <button
               className="accordion-button"
@@ -41,7 +20,10 @@ export default function About() {
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
-              style={myStyle}
+              style={{
+              backgroundColor: props.mode === "dark" ? "#414141" : "white",
+              color: props.mode === "dark" ? "white" : "#414141",
+            }}
             >
               Accordion Item #1
             </button>
@@ -64,10 +46,16 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div style={myStyle} className="accordion-item">
+        <div style={{
+              backgroundColor: props.mode === "dark" ? "#414141" : "white",
+              color: props.mode === "dark" ? "white" : "#414141",
+            }} className="accordion-item">
           <h2 className="accordion-header" id="headingTwo">
             <button
-              style={myStyle}
+              style={{
+              backgroundColor: props.mode === "dark" ? "#414141" : "white",
+              color: props.mode === "dark" ? "white" : "#414141",
+            }}
               className="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
@@ -96,10 +84,16 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div style={myStyle} className="accordion-item">
+        <div style={{
+              backgroundColor: props.mode === "dark" ? "#414141" : "white",
+              color: props.mode === "dark" ? "white" : "#414141",
+            }} className="accordion-item">
           <h2 className="accordion-header" id="headingThree">
             <button
-              style={myStyle}
+              style={{
+              backgroundColor: props.mode === "dark" ? "#414141" : "white",
+              color: props.mode === "dark" ? "white" : "#414141",
+            }}
               className="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
@@ -129,13 +123,13 @@ export default function About() {
           </div>
         </div>
       </div>
-      <button
+      {/* <button
         onClick={toggleStyle}
         type="button "
         className="btn btn-primary my-3"
       >
         {btnText}
-      </button>
+      </button> */}
     </div>
   );
 }
