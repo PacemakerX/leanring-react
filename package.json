@@ -1,5 +1,6 @@
 {
-  "name": "my-first",
+  "name": "my-first", 
+  "homepage": "https://github.com/PacemakerX/leanring-react.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
