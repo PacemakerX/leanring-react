@@ -91,13 +91,13 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleDownClick}>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleDownClick}>
           Convert to LowerCase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleNumclick}>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleNumclick}>
           Convert to numercal form
         </button>
 
