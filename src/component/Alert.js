@@ -6,7 +6,8 @@ export default function Alert(props) {
   };
 
   return (
-    props.alert && (
+    <div style={{height:'50px'}}>
+    {props.alert && (
       <div
         className={`alert alert-${lowercaseFirstCharacter()} alert-dismissible fade show`}
         role="alert"
@@ -20,6 +21,7 @@ export default function Alert(props) {
           aria-label="Close"
         ></button>
       </div>
-    )
+    )} {/* Now that we have enclosed the props.alert inside the div, we neet to wrap it up with curly braces  */}
+    </div>
   );
 }
