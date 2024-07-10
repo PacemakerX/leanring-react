@@ -26,18 +26,6 @@ export default function TextForm(props) {
     setText("");
   };
 
-  const handleNumclick = () => {
-    // console.log("button was clicked" + text); for clarity
-
-    let newText;
-    if (!(text.length > 10)) {
-      newText = text;
-    } else {
-      newText = text[0] + (text.length - 2) + text[text.length - 1];
-    }
-    props.showAlert("The Text is Converted to Numerical Case", "Success");
-    setText(newText);
-  };
   const handleOnChange = (event) => {
     // console.log("on change "); for clarity
 
@@ -70,12 +58,7 @@ export default function TextForm(props) {
 
   return (
     <>
-      <div
-      // style={{
-      //   backgroundColor: props.mode === "dark" ? "white" : "#414141",
-      //   color: props.mode === "dark" ? "white" : "#414141",
-      // }}
-      >
+      <div>
         <h1>{props.heading} </h1>
         <div className={`form-group mb-3 ${props.mode}`}>
           <textarea
@@ -97,9 +80,7 @@ export default function TextForm(props) {
         <button className="btn btn-primary mx-2 my-2" onClick={handleDownClick}>
           Convert to LowerCase
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={handleNumclick}>
-          Convert to numercal form
-        </button>
+
 
         <button className="btn btn-primary mx-2 my-2" onClick={handle}>
           Clear text
