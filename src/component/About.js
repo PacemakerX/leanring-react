@@ -85,7 +85,7 @@ export default function About(props) {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Numerical Case Conversion
+              Copy to Clipboard
             </button>
           </h2>
           <div
@@ -95,7 +95,7 @@ export default function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-            <strong>Numerical Form Conversion:</strong> Convert your text into numerical form, making it easy to handle various numeric data formats.
+            <strong>Copyt to Clipboard:</strong> Copies the given text in the text area to the clipboard and receive an alert.
             </div>
           </div>
         </div>
