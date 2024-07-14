@@ -52,7 +52,7 @@ function App() {
             <Routes>
               <Route path="/about" element={<About mode={mode} />} />
               <Route
-                path="/"
+                path="/learning-react"
                 element={
                   <TextForm
                     heading="Enter the text to analyze"

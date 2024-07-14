@@ -9,7 +9,7 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand" exact to="/">
+        <Link className="navbar-brand"  to="/">
           {props.title}
         </Link>
         <button
@@ -26,12 +26,12 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" exact to="/">
+              <Link className="nav-link active" aria-current="page"  to="/">
                 Home
               </Link> {/*To accomodate  reac router dom we will use , link and to in place of a and href */}
             </li>
             <li className="nav-item">
-              <Link className="nav-link" exact to="/about"> {/* Use , exact to prevent partial matcing in react, alway use eact to , beware */}
+              <Link className="nav-link"  to="/about"> {/* Use ,  exact to prevent partial matcing in react, alway use eact to , beware */}
                 {props.about}
               </Link>
             </li>
